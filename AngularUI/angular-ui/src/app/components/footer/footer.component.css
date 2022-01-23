@@ -1,0 +1,18 @@
+.footer {
+  display: flex;
+  color: #fff;
+  background-color: rgb(31, 31, 31);
+}
+
+.footer > * {
+  flex: 1 100%;
+}
+
+.footer a {
+  text-decoration: none;
+}
+
+.b-footer {
+  text-align: center;
+  color: #999;
+}

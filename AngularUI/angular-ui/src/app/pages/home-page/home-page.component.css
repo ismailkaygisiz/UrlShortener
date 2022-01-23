@@ -1,0 +1,27 @@
+input {
+  height: 50px;
+  border: 1px solid rgba(49, 44, 44, 0.2);
+}
+
+input:focus {
+  outline: none;
+  border: 1px solid rgba(49, 44, 44, 0.5);
+}
+
+.button {
+  border-radius: 48px;
+  background: teal;
+  border: none;
+  color: white;
+  width: 223px;
+  height: 48px;
+}
+
+.button:hover {
+  background: darkcyan;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+}

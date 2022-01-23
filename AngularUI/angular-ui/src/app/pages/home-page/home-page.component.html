@@ -1,0 +1,72 @@
+<div class="container">
+  <div
+    class="row"
+    style="
+      text-align: center;
+      margin-top: 6vh;
+      align-items: center;
+      margin-right: 1vh;
+      margin-left: 1vh;
+    "
+  >
+    <div class="col-md-3"></div>
+    <div class="col-md-6">
+      <div class="row">
+        <h1>URL SHORTENER</h1>
+      </div>
+
+      <form [formGroup]="urlAddForm">
+        <div class="row" style="margin-top: 5vh">
+          <input
+            type="text"
+            placeholder="URL GİRİNİZ"
+            formControlName="urlAddress"
+            style="border-radius: 8px"
+          />
+        </div>
+
+        <div class="row" style="margin-top: 2vh">
+          <input
+            type="text"
+            placeholder="Keyword"
+            formControlName="keyword"
+            style="border-radius: 8px"
+          />
+        </div>
+      </form>
+      <div class="row" style="margin-top: 4vh; justify-content: right">
+        <button class="button" (click)="add()">OLUŞTUR</button>
+      </div>
+      <div class="row" style="margin-top: 5vh">
+        <input
+          type="text"
+          disabled
+          style="border-radius: 8px; width: 100%"
+          [value]="url?.code"
+        />
+      </div>
+      <div class="row" style="margin-top: 5vh; margin-bottom: 3vh">
+        <div class="col">
+          <label class="form-control" style="margin-bottom: 1vh"
+            >Oluşturulma Tarihi</label
+          >
+          <div class="alert alert-primary" role="alert">
+            <span style="color: black; font-weight: bold">
+              {{ url?.createdDate | date: "dd/MM/yyyy" }}
+            </span>
+          </div>
+        </div>
+        <div class="col">
+          <label class="form-control" style="margin-bottom: 1vh"
+            >Son Kullanım Tarihi</label
+          >
+          <div class="alert alert-primary" role="alert">
+            <span style="color: black; font-weight: bold">
+              {{ url?.lastDate | date: "dd/MM/yyyy" }}
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
